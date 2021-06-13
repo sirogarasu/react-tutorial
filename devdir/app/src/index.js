@@ -64,6 +64,8 @@ import './index.css';
       this.setState({
         history: history.concat([{
           squares: squares,
+          col: (i % 3) +1,
+          row: Math.floor(i/3) + 1,
         }]),
         stepNumber: history.length,
         xIsNext: !this.state.xIsNext,
@@ -85,7 +87,7 @@ import './index.css';
 
       const moves = history.map((step, move) => {
         const desc = move ?
-          'Go to move #' + move :
+          `Go to move #${move} (col: ${step.col}, row:${step.row})`:
           'Go to game start';
         return (
           <li key={move}>
