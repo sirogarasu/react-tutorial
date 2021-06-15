@@ -15,6 +15,7 @@ import './index.css';
       return <Square 
                 value={this.props.squares[i]}
                 onClick={() => this.props.onClick(i)}
+                key={i}
             />;
     }
   
