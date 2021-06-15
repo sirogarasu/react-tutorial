@@ -106,6 +106,9 @@ import './index.css';
       } else {
         status = 'Next player:' + (this.state.xIsNext ? 'X' : 'O'); 
       }
+
+      const orderButton = `ASC <-> DES`;
+
       return (
         <div className="game">
           <div className="game-board">
@@ -116,6 +119,7 @@ import './index.css';
           </div>
           <div className="game-info">
             <div>{status}</div>
+            <div><button>{orderButton}</button></div>
             <ol>{moves}</ol>
           </div>
         </div>
